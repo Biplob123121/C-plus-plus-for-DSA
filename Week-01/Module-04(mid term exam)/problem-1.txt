@@ -1,0 +1,26 @@
+a. Explain Stack and Heap memory.  5
+
+Stack Memory: Stack memory is a compiled time memory. It is a temporary and sequential memory. After execution, the stack memory deletes all data from memory. It works as first-in-last-out order.
+
+Heap Memory: Heap memory is a run time memory. This memory is used for store data untill it is deleted by manually. It stores data randomly and we can resize the variable. It is also called dynamic memory.
+
+b. Why do we need dynamic memory allocation? Explain with examples. 5+5
+
+We need dynamic memory allocation, because if we use it, we can resize and delete the variable from the memory and it stores data for the run time. So that we can access the data more than once. Here we can see an example:
+
+int arr = new int[5];
+int brr[5];
+
+Here brr[5], this array is static and fixed size, we can't delete the array. and it works in the compiled time. On the other hand, arr[5], this array is dynamic, we can delete this array. In the dynamic memory allocation, we can resize and delete a variable.
+
+c. How to create a dynamic array? What are the benefits of it? 5+10
+
+We can create a dynamic array with the process which I given bellow:
+int arr = new int[5];
+Here, arr is a dynamic array. At the time of creating a dynamic array we use the new keyword.
+
+There are various benefits of a dynamic array.
+ (i) We can resize a dynamic array.
+ (ii) We can delete a dynamic array from the memory.
+ (iii) we can access the array elements more than once untill we delete it.
+We get these benefits from a dynamic memory.

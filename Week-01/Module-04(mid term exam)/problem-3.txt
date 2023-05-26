@@ -1,0 +1,91 @@
+a. What is the size that an object allocates to the memory? 5
+
+The size that an object allocates to the memory is the sum of total behaviours of an object. Here a calculation is given bellow:
+class Student{
+    public:
+        char name[20];
+        int roll;
+        int age;
+};
+
+int main(){
+    Student s1;
+}
+
+Here the size of s1 will be 20+4+4 = 28 bytes.
+
+b. Can you return a static object from a function? If yes, show with an example. 10
+
+Yes. Here an example is given bellow:
+#include <bits/stdc++.h>
+using namespace std;
+class Student
+{
+public:
+    char name[100];
+    int roll;
+    int cls;
+
+    Student(char *nm, int rl, int cl)
+    {
+        strcpy(name, nm);
+        roll = r;
+        cls = c;
+    }
+};
+
+Student func()  // From this function we can return a static object named s1
+{
+    char name[100] = "Biplob Kumar";
+    Student s1(name, 102, 12);
+    return s1;
+}
+int main()
+{
+    Student s1 = func();
+    return 0;
+}
+
+c. Why do we need -> (arrow sign)? 5
+
+We need the arrow sign when we create a dynamic object and then when input a value of the object or see the output of that object.
+
+d. Create two objects of the Person class from question 2-c and initialize them with proper value. Now compare whose age is greater, and print his/her name. 10
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Person
+{
+public:
+    char name[100];
+    float height;
+    int age;
+    Person(char *nm, float ht, int ag)
+    {
+        strcpy(name, nm);
+        height = ht;
+        age = ag;
+    }
+};
+
+int main()
+{
+    char name1[100] = "Nirob";
+    char name2[100] = "Sagor";
+    Person *p1 = new Person(name1, 5.50, 14);
+    Person *p2 = new Person(name2, 6.50, 24);
+    if (p1->age == p2->age)
+    {
+        cout << "Same Age\n";
+    }
+    else if (p1->age > p2->age)
+    {
+        cout << p1->name << endl;
+    }
+    else
+    {
+        cout << p2->name << endl;
+    }
+    return 0;
+}

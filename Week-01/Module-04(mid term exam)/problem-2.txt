@@ -1,0 +1,65 @@
+a. How does class and object work? How to declare an object? 5+5
+
+Class: Class is a group of objects. It is declared outside the main function and we need to use the class keword to declare a class. Here a class is given bellow:
+class Student{
+    public:
+        char name[100];
+        int roll;
+};
+
+Object: Object is the unit of a class. It has some behaviours or values. We can use these values. Here an object is given bellow:
+inside the main function and using the above class we can declare an object:
+Student s1;
+char nm[100] = "Biplob Kumar";
+strcpy(s1.name, nm);
+s1.roll = 20;
+
+
+b. What is a constructor and why do we need this? How to create a constructor show with an example. 10+5
+
+Constructor: Constructor is one kind of function which has no return type and it is declared inside the class. We can use a constructor to input the value of an object easily. Here an example is given bellow:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+    public:
+    char name[100];
+    int roll;
+    Student(char* nm, int rl){
+        strcpy(name, nm);
+        roll = rl;
+    }
+};
+int main()
+{
+    Student s1("Biplob", 20);
+    return 0;
+}
+in this example, here Student() is an constructor. 
+
+c. Create a class named Person where the class will have properties name(string), height(float) and age(int). Make a constructor and create a dynamic object of that class and finally pass proper values using the constructor.  15
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Person
+{
+public:
+    char name[100];
+    float height;
+    int age;
+    Person(char *nm, float ht, int ag)
+    {
+        strcpy(name, nm);
+        height = ht;
+        age = ag;
+    }
+};
+
+int main()
+{
+    char name[100] = "Biplob Kumar";
+    Person *p1 = new Person(name, 6.50, 28);
+    return 0;
+}
